@@ -1,0 +1,91 @@
+@import "main";
+.block4 {
+  position: relative;
+  max-width: 1068px;
+  margin: 0 auto 192px;
+  &__title {
+    display: block;
+    margin: 0 auto;
+    @include textMixin($main-color-darkblue, 40, 138, 50);
+    max-width: 712px;
+    font-weight: 600;
+    text-align: center;
+  }
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    right: 0px;
+    bottom: 0;
+    width: 180%;
+    height: 100%;
+    background: url("../images/bloc4/background.png") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    opacity: .4;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, $gridBlockContact);
+    padding: $pad 20px;
+    grid-row-gap: $gridRowGap;
+    justify-content: space-between;
+    &__img {
+      width: $gridBlockContact;
+      margin-bottom: 64px;
+    }
+    &__title {
+      @include textMixin($main-color-darkblue, 30, 48, 41);
+    }
+    &__text {
+      @include textMixin($main-color-darkblue, 17, 40, 28);
+    }
+  }
+  & .btn {
+    @include btn(16, 32);
+  }
+  &__sign {
+    max-width: 768px;
+    margin: 0 auto 192px;
+    &__title {
+      @include textMixin($main-color-darkblue, 30, 90, 50);
+      font-weight: 600;
+      text-align: center;
+    }
+    &__text {
+      @include textMixin($main-color-darkblue, 17, 40, 28);
+      font-weight: 300;
+    }
+    &__list {
+      list-style-type: none;
+      margin-bottom: 64px;
+      &--item {
+        @include textMixin($main-color-darkblue, 17, 10, 28);
+        font-weight: 300;
+        text-indent: -5px;
+        &::before {
+          content: "-";
+          text-indent: -5px;
+        }
+      }
+    }
+  }
+  &__contact {
+    & .btn {
+      @include btn(16, 66);
+      margin-right: 32px;
+    }
+    &--info {
+      @include textMixin($main-color-darkblue, 17, 0, 28);
+      margin-right: 5px;
+    }
+    &--info-link {
+      @include textMixin($main-color-green, 17, 0, 28);
+      font-weight: 800;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AA0CA,CAAE;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;EACtB,WAAW,EAAE,CAAC;;AAGhB,UAAW;EACT,KAAK,EAAE,MAAsB;EAC7B,MAAM,EAAE,MAAM;;AClDhB,OAAQ;EACN,cAAc,EAAE,KAAK",
+"sources": ["main.scss","block4.scss"],
+"names": [],
+"file": "block4.css"
+}

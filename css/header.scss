@@ -1,0 +1,68 @@
+@import "main";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  width: $container-width  + px;
+  margin: 0 auto;
+}
+.header {
+  padding: 13px 0;
+  margin-bottom: 128px;
+  @include flexSpaceBetween;
+  &__logo {
+    text-decoration: none;
+    &--img {
+      width: 123px;
+    }
+  }
+  &__nav {
+    @include flexSpaceBetween;
+    max-width: 562px;
+    width: 100%;
+    & .nav {
+      @include flexSpaceBetween;
+      list-style-type: none;
+      &__item {
+        margin-right: 20px;
+        padding: 10px 0;
+        &--link {
+
+          text-decoration: none;
+          @include textMixin($main-color-darkblue, 16, 0, 22);
+          font-weight: 400;
+        }
+        .animated-line {
+          position: relative;
+          padding-bottom: .75em;
+          @include hoverLink($main-color-darkblue);
+        }
+        & .active {
+          color: #fff;
+          padding: 12px 30px;
+          border-radius: 28px;
+          background-color: $main-color-green;
+          offset: 0,2px;
+          box-shadow: 0 0 5px 0 $main-color-green;
+          font-weight: 600;
+          transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          border: 1px solid transparent;
+          &:hover {
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+            border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            border: 1px solid $main-color-green;
+            background-color: transparent;
+            color: $main-color-green
+          }
+        }
+      }
+    }
+  }
+}
+

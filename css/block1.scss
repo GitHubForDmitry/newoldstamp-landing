@@ -1,0 +1,33 @@
+@import "main";
+.block1 {
+  position: relative;
+  @include flexSpaceBetween;
+  max-height: 500px;
+  height: 100%;
+  margin-bottom: 200px;
+  &__wrapper {
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    width: 40%;
+    @include textMixin($main-color-darkblue, 40, 74, 50);
+  }
+  & .btn {
+    @include btn(16, 32);
+  }
+  &__img {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    max-height: 500px;
+    max-width: 900px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+

@@ -1,0 +1,71 @@
+$main-color-green: #709C8A;
+$main-color-darkblue: #3B3954;
+$container-width: 1280;
+$gridBlock: 330px;
+$gridBlockContact: 427px;
+$gridRowGap: 128px;
+$gridColGap: 128px;
+$pad: 30px;
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin textMixin($color, $fontsize, $marginBottom, $lineHeight) {
+  color: $color;
+  font-size: $fontsize + px;
+  margin-bottom: $marginBottom + px;
+  line-height: $lineHeight + px;
+}
+
+@mixin btn($padding-y, $padding-x) {
+  @include textMixin(#fff, 16, 0, 22);
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background-color: $main-color-green;
+  padding: $padding-y + px $padding-x + px;
+  border-radius: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  offset: 0,2px;
+  box-shadow: 0 0 5px 0 $main-color-green;
+  &:hover {
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: 1px solid $main-color-green;
+    background-color: transparent;
+    color: $main-color-green
+  }
+}
+
+@mixin hoverLink($color) {
+  &:last-child:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  &:last-child:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $color;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+  }
+}
