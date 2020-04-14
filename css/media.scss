@@ -31,7 +31,7 @@
   }
 }
 
-@media screen and (max-width: 1034px) {
+@media screen and (max-width: 1175px) {
   .container {
     width: 768px;
   }
@@ -101,8 +101,9 @@
     line-height: 10px;
   }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 880px) {
   .container {
+    position: relative;
     width: 320px;
   }
   .header__nav {
